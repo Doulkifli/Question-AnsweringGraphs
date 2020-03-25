@@ -1,0 +1,1 @@
+:auto Using Periodic Commit LOAD CSV with headers FROM "file:/G_Comments.csv" as row match (n:User {UserId:toInteger(row.OwnerUserId)}),(b:User {UserId:toInteger(row.UserId)}) create (b) -[:Commented]- > (n)
