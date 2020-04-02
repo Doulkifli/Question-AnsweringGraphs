@@ -1,1 +1,1 @@
-:auto Using Periodic Commit LOAD CSV with headers FROM "file:///Comments.csv" as row match (n:User {UserId:coalesce(toInteger(row.OwnerUserId), 0)}),(b:User {UserId:coalesce(toInteger(row.UserId), 0)}) create (b) -[:Commented{NbrOfComment:row.NbrOfComments}]- > (n)
+:auto Using Periodic Commit LOAD CSV with headers FROM "file:///Comments.csv" as row match (n:User {UserId:coalesce(toInteger(row.OwnerUserId), 0)}) match (b:User {UserId:coalesce(toInteger(row.UserId), 0)}) create (b)-[:Commented{NbrOfComment:row.NbrOfComments}]-> (n)
