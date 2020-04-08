@@ -1,1 +1,0 @@
-:auto Using Periodic Commit LOAD CSV with headers FROM "file:///ApproveEditSuggestionVotes.csv" as row match (n:User {UserId:toInteger(row.OwnerUserId)}) match (b:User{UserId:toInteger(row.UserId)}) create (b)-[:ApprovedEditVote]-> (n)
