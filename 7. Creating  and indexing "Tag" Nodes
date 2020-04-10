@@ -1,0 +1,3 @@
+:auto using periodic commit LOAD CSV WITH HEADERS FROM 'file:////tags.csv' AS row
+CREATE (t:Tag {TagId: toInteger(row.Id), TagName:row.TagName});
+create index on :Tag(TagId)
