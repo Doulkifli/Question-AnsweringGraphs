@@ -1,0 +1,1 @@
+:auto Using Periodic Commit LOAD CSV with headers FROM "file:///tagpairs.csv" as row match (n:Tag {TagId:toInteger(row.first)}) match (b:Tag {TagId:toInteger(row.second)}) MERGE (n)-[:CoOccurredWith{NbrOfOcc:toInteger(row.NbrOfOcc)}]-(b)
