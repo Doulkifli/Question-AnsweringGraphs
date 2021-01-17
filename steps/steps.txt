@@ -1,0 +1,15 @@
+• To create the database:
+
+    1-Start by running a script to create nodes and relationships (csv files).
+    2-Place the csv files in the directory of your database on Neo4j
+    3-Run the csv files import script.
+
+• For the use of the application:
+
+    1-Open your Database on Neo4j.
+    2-Start the execution of the application by double-clicking on the file: "analyze_OG-1.0-M.jar"
+
+•	To know :
+    1-Install Java jdk 8 at most
+    2-Install Neo4j Desktop version 1.2.5 at most
+    3-Install the database Pulgins: APOC and Graph Data Science Lib
