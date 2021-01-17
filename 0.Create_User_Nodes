@@ -1,3 +1,0 @@
-:auto using periodic commit LOAD CSV WITH HEADERS FROM 'file:////Users.csv' AS row
-CREATE (u:User {UserId: toInteger(row.Id), Reputation:toInteger(row.Reputation), Age: coalesce(row.age, 99), DisplayName:row.DisplayName, Location:coalesce(row.Location, "Unavailable"),UpVotes:toInteger(row.UpVotes)});
-Create (:User{UserId:0}) 
