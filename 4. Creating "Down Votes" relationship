@@ -1,1 +1,0 @@
-:auto Using Periodic Commit LOAD CSV with headers FROM "file:///DownVotes.csv" as row match (n:User {UserId:toInteger(row.owneruserid)}) match (b:User {UserId:toInteger(row.userid)}) create (b)-[:DownVotes{NbrOfVotes:toInteger(row.NbrOfVotes)}]-> (n)
